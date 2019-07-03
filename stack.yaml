@@ -6,7 +6,7 @@
 
 # Resolver to choose a 'specific' stackage snapshot or a compiler version.
 # A snapshot resolver dictates the compiler version and the set of packages
-# to be used for project dependencies. For example:
+# to be used for project 1. For example:
 #
 # resolver: lts-3.5
 # resolver: nightly-2015-09-21
@@ -39,7 +39,8 @@ packages:
 # - git: https://github.com/commercialhaskell/stack.git
 #   commit: e7b331f14bcffb8367cd58fbfc8b40ec7642100a
 #
-# extra-deps: []
+extra-deps:
+  - blake2-0.3.0 # Blake2 hashing
 
 # Override default flag values for local packages and extra-deps
 # flags: {}
