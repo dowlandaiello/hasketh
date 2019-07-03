@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b8dcbe9528a045db190710532849bc661392eca5fcc172f2b4ff4d1cbfce6078
+-- hash: 0beea2edfb3843822db47ef95ce79d25960eddcbaa85973a2f3d87ea7994ff01
 
 name:           hasketh
 version:        0.1.0.0
@@ -36,8 +36,10 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , base16-bytestring
     , blake2
     , bytestring
+    , text
   default-language: Haskell2010
 
 executable hasketh-exe
@@ -49,9 +51,11 @@ executable hasketh-exe
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , base16-bytestring
     , blake2
     , bytestring
     , hasketh
+    , text
   default-language: Haskell2010
 
 test-suite hasketh-test
@@ -64,7 +68,9 @@ test-suite hasketh-test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , base16-bytestring
     , blake2
     , bytestring
     , hasketh
+    , text
   default-language: Haskell2010

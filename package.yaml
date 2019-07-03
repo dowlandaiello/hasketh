@@ -13,6 +13,8 @@ tests:
 copyright: 2019 Dowland Aiello
 maintainer: mitsukomegumii@gmail.com
 dependencies:
+  - text
+  - base16-bytestring
   - base >= 4.7 && < 5
   - blake2
   - bytestring
