@@ -1,13 +1,14 @@
-module Types.Transaction.Transaction (
-    Transaction
-) where
+module Types.Transaction.Transaction
+    ( Transaction
+    )
+where
 
-import qualified Data.ByteArray
+import qualified Common.Hash                   as Hash
 
 ----------------------------------------------------------------------------
 -- Transaction
 ----------------------------------------------------------------------------
 
 newtype Transaction = Transaction {
-    hash :: ByteArray
+    hash :: Hash.Hash
 }

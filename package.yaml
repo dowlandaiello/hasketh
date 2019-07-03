@@ -1,49 +1,37 @@
-name:                hasketh
-version:             0.1.0.0
-github:              "dowlandaiello/hasketh"
-license:             BSD3
-author:              "Dowland Aiello"
-maintainer:          "mitsukomegumii@gmail.com"
-copyright:           "2019 Dowland Aiello"
-
-extra-source-files:
-- README.md
-- ChangeLog.md
-
-# Metadata used when publishing your package
-# synopsis:            Short description of your package
-# category:            Web
-
-# To avoid duplicated efforts in documentation and dealing with the
-# complications of embedding Haddock markup inside cabal files, it is
-# common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/githubuser/hasketh#readme>
-
-dependencies:
-- base >= 4.7 && < 5
-- blake2
-
 library:
   source-dirs: src
-
-executables:
-  hasketh-exe:
-    main:                Main.hs
-    source-dirs:         app
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - hasketh
-
 tests:
   hasketh-test:
-    main:                Spec.hs
-    source-dirs:         test
+    source-dirs: test
+    main: Spec.hs
     ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
     dependencies:
-    - hasketh
+      - hasketh
+copyright: 2019 Dowland Aiello
+maintainer: mitsukomegumii@gmail.com
+dependencies:
+  - base >= 4.7 && < 5
+  - blake2
+  - bytestring
+name: hasketh
+version: 0.1.0.0
+extra-source-files:
+  - README.md
+  - ChangeLog.md
+author: Dowland Aiello
+github: dowlandaiello/hasketh
+license: BSD3
+executables:
+  hasketh-exe:
+    source-dirs: app
+    main: Main.hs
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - hasketh
+description: Please see the README on GitHub at <https://github.com/githubuser/hasketh#readme>

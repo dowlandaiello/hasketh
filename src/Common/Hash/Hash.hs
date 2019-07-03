@@ -1,9 +1,10 @@
 module Common.Hash where
 
-import qualified Crypto.Hash.BLAKE2.BLAKE2s as Blake2
+import qualified Crypto.Hash.BLAKE2.BLAKE2s    as Blake2
+import qualified Data.ByteString               as BS
 
 ----------------------------------------------------------------------------
 -- Hash
 ----------------------------------------------------------------------------
 
--- type Hash = 
+newtype Hash = Hash BS.ByteString
