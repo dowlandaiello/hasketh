@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 0beea2edfb3843822db47ef95ce79d25960eddcbaa85973a2f3d87ea7994ff01
+-- hash: 358c663d533b1571b09cceb214b8db4fa6886868ac1fcb437cbf8bfa042c9020
 
 name:           hasketh
 version:        0.1.0.0
@@ -27,6 +27,7 @@ source-repository head
 
 library
   exposed-modules:
+      Common.Address.Address
       Common.Hash.Hash
       Lib
       Types.Transaction.Transaction
