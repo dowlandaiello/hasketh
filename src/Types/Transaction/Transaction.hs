@@ -3,7 +3,7 @@ module Types.Transaction.Transaction
     )
 where
 
-import qualified Common.Hash                   as Hash
+import qualified Common.Hash.Hash              as Hash
 
 ----------------------------------------------------------------------------
 -- Transaction
